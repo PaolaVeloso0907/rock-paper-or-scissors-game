@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(223, 215, 215);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12rem;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  color: rgb(92, 87, 68);
+}
+
+p,
+span {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(156, 150, 125);
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+#content-inicial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(236, 229, 229);
+  gap: 2rem;
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#content-inicial:hover {
+  transform: scale(1.05);
+}
+
+#content-game,
+#content-placar,
+#content-resumo-rodada {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(236, 229, 229);
+  gap: 3rem;
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#content-game:hover,
+#content-placar:hover,
+#content-resumo-rodada:hover {
+  transform: scale(1.05);
+}
+
+.btns {
+  padding: 1rem;
+  background-color: rgb(92, 87, 68);
+  border: none;
+  border-radius: 10px;
+  color: rgb(236, 229, 229);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btns:hover {
+  opacity: 0.7;
+}
+
+.select-btn {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.img-opcao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e4dfdf;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  img {
+    width: 60px;
+    height: auto;
+  }
+}
+
+.img-opcao:hover {
+  background-color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-color: #a3a3a3;
+}
+
+#mensagem-result {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}

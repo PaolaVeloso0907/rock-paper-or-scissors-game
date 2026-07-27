@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js"></script>
+    <title>Game | Home</title>
+</head>
+
+<body>
+    <main>
+        <div id="content-inicial">
+            <h1>Pedra, Papel ou Tesoura</h1>
+            <p>Clique no botão abaixo para poder iniciar!</p>
+
+            <button onclick="iniciar()" class="btns">Inicar partida!</button>
+        </div>
+
+        <div id="content-game">
+            <h2>Selecione uma opção:</h2>
+
+            <div class="select-btn">
+                <button class="img-opcao" onclick="selecionar(1)">
+                    <img src="./img/pedra.png" alt="Pedra">
+                </button>
+                <button class="img-opcao" onclick="selecionar(2)">
+                    <img src="./img/papel.png" alt="Papel">
+                </button>
+                <button class="img-opcao" onclick="selecionar(3)">
+                    <img src="./img/tesoura.png" alt="Tesoura">
+                </button>
+            </div>
+        </div>
+
+        <div id="content-resumo-rodada" class="escondido">
+            <h2>Rodada <span id="contador-rodada">1</span> de 3</h2>
+
+            <div class="batalha-container">
+                <p>Sua jogada: <strong id="jogada-usuario">...</strong></p>
+                <p>PC jogou: <strong id="jogada-pc">...</strong></p>
+                <h3 id="resultado-rodada-atual" class="mensagem-rodada">Você venceu a rodada!</h3>
+            </div>
+
+            <!-- O seu JS vai definir se esse botão vai para a próxima rodada ou pro placar final -->
+            <button class="btns" id="btn-proxima-etapa" onclick="avancarJogo()">Próxima Rodada</button>
+        </div>
+
+        <div id="content-placar">
+            <h3>Placar:</h3>
+
+            <div class="mini-historico">
+                <h4>Histórico da Partida:</h4>
+                <ul>
+                    <li>1ª Rodada: <span id="historico-r1">-</span></li>
+                    <li>2ª Rodada: <span id="historico-r2">-</span></li>
+                    <li>3ª Rodada: <span id="historico-r3">-</span></li>
+                </ul>
+            </div>
+
+            <span id="mensagem-result">venceu uhuuuul....</span>
+
+            <button class="btns" onclick="recomecar()">Jogar Novamente</button>
+        </div>
+    </main>
+</body>
+
+</html>
