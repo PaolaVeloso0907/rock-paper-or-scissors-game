@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./main.js"></script>
     <title>Game | Home</title>
 </head>
 
@@ -18,7 +17,7 @@
             <button onclick="iniciar()" class="btns">Inicar partida!</button>
         </div>
 
-        <div id="content-game">
+        <div id="content-game" class="esconder">
             <h2>Selecione uma opção:</h2>
 
             <div class="select-btn">
@@ -34,21 +33,23 @@
             </div>
         </div>
 
-        <div id="content-resumo-rodada" class="escondido">
+        <div id="content-resumo" class="esconder">
             <h2>Rodada <span id="contador-rodada">1</span> de 3</h2>
 
             <div class="batalha-container">
-                <p>Sua jogada: <strong id="jogada-usuario">...</strong></p>
-                <p>PC jogou: <strong id="jogada-pc">...</strong></p>
+                <p>User jogou: <strong id="jogada-user">...</strong></p>
+                <p>Mini jogou: <strong id="jogada-mini">...</strong></p>
                 <h3 id="resultado-rodada-atual" class="mensagem-rodada">Você venceu a rodada!</h3>
             </div>
 
-            <!-- O seu JS vai definir se esse botão vai para a próxima rodada ou pro placar final -->
-            <button class="btns" id="btn-proxima-etapa" onclick="avancarJogo()">Próxima Rodada</button>
+            <button class="btns" id="btn-proximo" onclick="avancarJogo()">Próxima Rodada</button>
+            <button class="btns esconder" id="btn-finalizar" onclick="finalizarPartida()">Finalizar Partida</button>
         </div>
 
-        <div id="content-placar">
+        <div id="content-placar" class="esconder">
             <h3>Placar:</h3>
+
+            <span id="mensagemResult">[Default]</span>
 
             <div class="mini-historico">
                 <h4>Histórico da Partida:</h4>
@@ -59,11 +60,12 @@
                 </ul>
             </div>
 
-            <span id="mensagem-result">venceu uhuuuul....</span>
 
             <button class="btns" onclick="recomecar()">Jogar Novamente</button>
         </div>
     </main>
+
+    <script src="./main.js"></script>
 </body>
 
 </html>

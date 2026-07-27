@@ -6,6 +6,10 @@
 
 body {
   background-color: rgb(223, 215, 215);
+  min-height: 100vh;
+  display: flex;           
+  justify-content: center; 
+  align-items: center;
 }
 
 main {
@@ -13,13 +17,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 12rem;
   width: 100%;
+  padding: 2rem;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
   color: rgb(92, 87, 68);
@@ -29,7 +34,7 @@ p,
 span {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(156, 150, 125);
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -52,8 +57,7 @@ span {
 
 #content-game,
 #content-placar,
-#content-resumo-rodada {
-  display: none;
+#content-resumo {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -67,8 +71,55 @@ span {
 
 #content-game:hover,
 #content-placar:hover,
-#content-resumo-rodada:hover {
+#content-resumo:hover {
   transform: scale(1.05);
+}
+#mensagem-result {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.esconder {
+  display: none;
+}
+
+.mini-historico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+
+  ul {
+    list-style: none; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  li {
+    background-color: rgb(223, 215, 215);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(92, 87, 68);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); 
+  }
+
+  span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(156, 150, 125); 
+  }
 }
 
 .btns {
@@ -118,11 +169,4 @@ span {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   border-color: #a3a3a3;
-}
-
-#mensagem-result {
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
 }
